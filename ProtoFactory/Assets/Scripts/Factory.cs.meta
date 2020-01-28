@@ -1,0 +1,36 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public enum OrgType
+{
+    Mushroom,
+    Plant,
+    PineTree,
+    Tree
+}
+
+public class Factory : MonoBehaviour
+{
+    public Organism SpawnType(OrgType prototype)
+    {
+        public iCopyable m_Copy;
+
+        switch (prototype)
+        {
+            case OrgType.Mushroom:
+                m_Copy = prototype.Copy();
+                return (Organism)m_Copy;
+            case OrgType.Plant:
+                m_Copy = prototype.Copy();
+                return (Organism)m_Copy;
+            case OrgType.PineTree:
+                m_Copy = prototype.Copy();
+                return (Organism)m_Copy;
+            case OrgType.Tree:
+                m_Copy = prototype.Copy();
+                return (Organism)m_Copy;
+        }
+        return null;
+    }
+}
